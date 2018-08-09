@@ -1,1 +1,11 @@
-{{movies|json}}
+<div class="movie-container">
+  <div *ngFor="let movie of movies" class="movie">
+    <a [routerLink]="['/movie', movie.id]">
+      <h3>Sala {{movie.room}}</h3>
+      <figure>
+        <img [src]="movie.poster" alt="{{movie.title}}">
+      </figure>
+      <h2>{{movie.title}}</h2>
+    </a>
+  </div>
+</div>

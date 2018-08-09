@@ -4,15 +4,14 @@ import movieList from './sample-movies';
 @Injectable()
 export class MoviesService {
 
-  moovies = movieList;
-
+  movies = movieList;
   constructor() { }
 
   getMovies(){
-    return this.moovies;
+    return this.movies;
   }
+
   getMovie(id){
-    return this.moovies = this.moovies.filter( movie => { movie.id !== id });
+    return this.movies.find(movie => movie.id === Number(id));
   }
-    //this.router.navigate(['/movies', this.movie.id]);
 }

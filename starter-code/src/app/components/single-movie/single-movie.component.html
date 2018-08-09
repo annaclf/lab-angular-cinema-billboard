@@ -1,3 +1,41 @@
-<p>
-  single-movie works!
-</p>
+<div class="single-movie">
+  <h2><span>Room {{movie.room}}</span> {{movie.title}}</h2>
+  <div class="d-flex flex-center">
+      <figure>
+          <img [src]="movie.poster" alt="{{movie.title}}">
+        </figure>
+      <div class="movie-info">
+          <div class="d-flex always-flex">
+            <h4>Genres</h4>
+            <ul>
+              <li *ngFor="let genre of movie.genres">
+                {{genre}}
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex always-flex">
+              <h4>Year</h4>
+              {{movie.year}}
+            </div>
+            <div class="d-flex always-flex">
+                <h4>Director</h4>
+                {{movie.director}}
+              </div>
+              <div class="d-flex always-flex">
+                  <h4>Hours</h4>
+                  <ul>
+                    <li *ngFor="let hour of movie.hours">
+                      {{hour}}
+                    </li>
+                  </ul>
+                </div>
+            <div class="synopsis">
+              <h4>Synopsis</h4>
+              <p>{{movie.synopsis}}</p>
+            </div>
+            <a class="btn" [routerLink]="['/']">Back to home</a>
+      </div>
+     
+  </div>
+  
+</div>

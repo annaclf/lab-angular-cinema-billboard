@@ -5,12 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MoviesService } from './services/movies.service';
-import { MoviesComponent } from './comonents/movies/movies.component';
-import { SingleMovieComponent } from './comonents/single-movie/single-movie.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { SingleMovieComponent } from './components/single-movie/single-movie.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { SingleMoviePageComponent } from './pages/single-movie-page/single-movie-page.component';
-import { HeaderComponent } from './comonents/header/header.component';
-import { FooterComponent } from './comonents/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
